@@ -17,7 +17,8 @@ Bitte verwende einen **zweiten Bildschirm**, damit du die Videokonferenz und den
 Falls du keinen Bildschirm hast, funktioniert auch ein zweites Gerät wie ein **zweiter Laptop oder ein Tablet**.
 
 Bitte sorge für eine ruhige Umgebung ohne viele Störgeräusche.
-Falls vorhanden, solltest du ein Headset verwenden und nicht das eingebaute Laptopmikrofon.
+Wir empfehlen, Kopfhörer zu verwenden, um Rückkopplungen zu vermeiden.
+Falls vorhanden, nutze bitte ein Headset und nicht das eingebaute Laptopmikrofon.
 Wir empfehlen dir außerdem, im Meeting das Audio stummzuschalten, wenn du gerade nicht sprichst.
 
 ## Benötigte Software
