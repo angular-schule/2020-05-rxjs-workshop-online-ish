@@ -52,31 +52,24 @@ Bitte installiere den Client auf dem Endgerät, mit dem du an der Videokonferenz
 Du musst keinen Account erstellen, sondern kannst ohne Anmeldung teilnehmen.
 Den **Zugang zum Meeting** lassen wir dir rechtzeitig vor dem Kurs per E-Mail zukommen.
 
-### Einstellungen testen
+### Zoom testen
 
 Bitte teste, ob deine Kamera und dein Mikrofon in Zoom korrekt funktionieren.
-Du kannst dazu in Zoom ein Testmeeting starten und die Einstellungen überprüfen: **https://zoom.us/test**
+Du kannst dazu in Zoom ein Testmeeting starten und die Einstellungen überprüfen: **https://zoom.us/test**  
 
-Außerdem kannst du dich mit der Oberfläche von Zoom kurz vertraut machen.
+Außerdem kannst du dich im Testmeeting mit der Bedienung von Zoom kurz vertraut machen.
 
 **Funktioniert etwas nicht oder ist etwas unklar?
-Wir bieten vor der Schulung ein Zeitfenster für einen Technik-Check an, um offene Fragen zu klären.**
+Wir bieten einen Tag vor der Schulung ein Zeitfenster für einen Technik-Check an, um offene Fragen zu klären.**
 
 
 ## Projekt installieren
 
-Bitte lade dir dieses Git-Repository auf deinen Rechner.
-Dazu kannst du das Repo entweder komplett klonen oder die Dateien als ZIP direkt von GitHub herunterladen.
-
-### Repo klonen
+Bitte lade dir das folgende Git-Repository auf deinen Rechner.
+Dazu kannst du das Repo entweder komplett klonen oder die Dateien als [ZIP direkt von GitHub herunterladen](https://github.com/angular-schule/2020-05-rxjs-workshop-online-ish/archive/master.zip).
 
 ```bash
 git clone https://github.com/angular-schule/2020-05-rxjs-workshop-online-ish.git
-```
-
-### Abhängigkeiten installieren
-
-```
 cd 2020-05-rxjs-workshop-online-ish
 npm i
 ```
