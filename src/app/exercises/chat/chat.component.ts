@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject, ReplaySubject, merge, concat, race, forkJoin } from 'rxjs';
+import { Subject, ReplaySubject, concat, race, forkJoin, merge } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -28,7 +28,15 @@ export class ChatComponent implements OnInit {
      * - forkJoin (When all observables complete, emit the last emitted value from each.)
      */
 
-    
+    concat(
+      this.msg.julia$.pipe(map(msg => 'JULIA: ' + msg)),
+      this.msg.georg$.pipe(map(msg => 'GEORG: ' + msg)),
+      this.msg.john$.pipe(map(msg => 'JOHN: ' + msg))
+    ).subscribe({
+      next: msg => this.log(msg),
+      complete: () => this.log('All members left')
+    });
+
 
     /******************************/
   }
