@@ -19,7 +19,48 @@ export class CreatingComponent implements OnInit {
      * Du kannst die Methode this.log() verwenden, um eine Ausgabe in der schwarzen Box im Browser zu erzeugen.
      */
 
-     
+
+     function producer(obs) {
+      obs.next(4);
+      obs.next('A');
+      obs.next('B');
+      obs.next('C');
+      setTimeout(() => obs.next(1), 2000);
+      setTimeout(() => obs.complete(), 3100);
+     }
+
+    const observer = {
+      next: e => this.log('HALLO' + e),
+      error: err => console.error(err),
+      complete: () => console.log('Complete')
+    };
+
+     // producer(observer);
+     // producer(observer);
+
+     const myObs$ = new Observable(producer);
+     /*myObs$.subscribe(observer);
+     myObs$.subscribe(e => console.log('COOL', e));*/
+
+     const timer$ = interval(1000);
+
+     timer$.pipe(
+       map(e => e * 3),
+       filter(e => e % 2 === 0)
+     ).subscribe({
+      next: e => this.log(e),
+      error: e => this.log('ERR' + e),
+      complete: () => this.log('Complete'),
+     });
+
+     /*setTimeout(() => {
+      timer$.subscribe({
+        next: e => this.log(e),
+        error: e => this.log('ERR' + e),
+        complete: () => this.log('Complete'),
+       });
+     }, 3000);*/
+
 
      /*****************************/
   }
