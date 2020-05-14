@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject, ReplaySubject, Observable } from 'rxjs';
-import { mergeMap, concatMap, switchMap, exhaustMap } from 'rxjs/operators';
+import { Subject, ReplaySubject, Observable, merge, timer } from 'rxjs';
+import { mergeMap, concatMap, switchMap, exhaustMap, map, mergeAll } from 'rxjs/operators';
 
 import { ExerciseService } from '../exercise.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'rxw-higherorder',
@@ -24,7 +25,12 @@ export class HigherorderComponent implements OnInit {
      * Ziel: this.result$
      */
 
-    
+    this.result$ = this.source$.pipe(
+      exhaustMap(tier => this.es.echo(tier)),
+    );
+
+
+
 
     /******************************/
 
