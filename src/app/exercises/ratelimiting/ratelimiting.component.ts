@@ -26,7 +26,9 @@ export class RatelimitingComponent implements OnInit {
      * - sampleTime: periodisch Werte entnehmen (sofern vorhanden)
      */
 
-    
+    this.result$ = this.events$.pipe(
+      debounceTime(1000)
+    );
 
     /******************************/
   }

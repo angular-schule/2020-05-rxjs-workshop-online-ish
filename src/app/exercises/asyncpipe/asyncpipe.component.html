@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="result$ | async as result">
   <div class="col text-center">
     <h3>Output</h3>
     <div class="big-num">
@@ -6,3 +6,5 @@
     </div>
   </div>
 </div>
+
+<button (click)="1+1">Hallo</button>
